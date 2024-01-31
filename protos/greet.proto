@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/praveenmahasena647/grpc_play;grpc_play";
+
+service Greet{
+    rpc SayHello(HelloReq) returns(HelloRes);
+}
+
+message HelloReq {
+    string name = 1;
+}
+
+message HelloRes {
+    string greetStr = 1;
+}
